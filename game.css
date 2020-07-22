@@ -1,0 +1,50 @@
+  html, body {
+    height: 100%;
+    margin: 0;
+    background:url("https://image.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg");
+    #background:url("https://imgs.classicfm.com/images/61630?width=1000&crop=16_9&signature=UOxsAc4VhzNYQEIG-RTXur_mix8=") no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-flow:column;
+    justify-content: center;
+  }
+
+
+canvas {
+    border: 1px solid #fffeff;
+    background:black;
+  }
+
+
+.score
+{
+  display:flex;
+  font-size:40px;
+  flex-direction: row;
+  justify-content: space-around;
+  color:white;
+}
+
+
+.score> div {
+  width: 480px;
+  margin: 10px;
+  text-align: center;
+  
+}
+h1
+{
+  display:Block;
+  color:white;
+}
+  
+  
+h2
+{
+  display:Block;
+  color:white;
+}

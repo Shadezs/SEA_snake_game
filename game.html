@@ -1,0 +1,33 @@
+<!-- 
+game.html
+
+This code displays what you see when you first load https://t1-snakesquad-completed.glitch.me/game.html, which 
+is mostly a HTML5 canvas (that the game will appear on). It relies on game.css for styling and game.js for interactivity. 
+
+You don't need to make any changes here. 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/game.css">
+</head>
+<body>
+  <div class="score">
+    <div id="score">
+      score:0
+    </div>
+    <div id="lives">
+      Lives:3
+    </div>
+  </div>
+  <canvas width="600" height="600" id="game"></canvas>
+  <h1 id="Maxscore">
+    High score: 0
+    Second Highest:0
+  </h1>
+  <div> <!-- These are hidden elements that we will display in game.js --> 
+    <img id="avatar" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="250" height="200">
+  </div>
+  <script src="/game.js" defer></script>
+</body>
+</html> 
