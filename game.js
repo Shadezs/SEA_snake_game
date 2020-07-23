@@ -7,8 +7,6 @@ console.log("hello, game is started")
 /***INITIALIZING VARIABLES AND OBJECTS***/
 let life =3;
 let Highestscore=0;
-let secondHighest=0; 
-let thirdHighest=0;
 let score =0;
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
@@ -24,7 +22,7 @@ let snake = {
   y_step: 0,
   cells: [],  //an array that keeps track of all grids the snake body occupies
   currentLength: 1,//current length of the snake. grows when eating an apple.
-  color:'#a3ff00'
+  color:'#AA1B74'
 };
 let apple=
 {
@@ -96,16 +94,11 @@ function highscore(){
   if(score>Highestscore)
   {
     Highestscore=score;
-  }else if(score>secondHighest && score<Highestscore)
-  {
-    secondHighest=score;
-  }else
-  {
-    thirdHighest=score;
   }
   
 }
 randomlyGenerateApple();
+randomstart();
 function snakeSquadLoop() {
   requestAnimationFrame(snakeSquadLoop);
   // if count < 16, then keep looping. Don't animate until you get to the 16th frame. This controls the speed of the animation.
@@ -116,6 +109,7 @@ function snakeSquadLoop() {
   //Otherwise, it's time to animate. 
   count = 0;
   context.clearRect(0,0,canvas.width,canvas.height);
+  
   calculateSnakeMove();
   highscore();
   drawSnake();
@@ -196,6 +190,10 @@ function snakeTouchesApple(){
 }
 function lengthenSnakeByOne(){
   snake.currentLength = snake.currentLength + 1;
+}
+function randomstart(){
+  snake.x=getRandomInt(0,15) * grid;
+  snake.y=getRandomInt(0,15) * grid;
 }
 function randomlyGenerateApple(){
   apple.x = getRandomInt(0, 15) * grid;
